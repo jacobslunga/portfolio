@@ -11,7 +11,7 @@ const experience = [
   {
     company: "Axis Communications",
     role: "Software Engineer Intern",
-    period: "2024",
+    period: "2025",
   },
   {
     company: "Dyno Robotics",
@@ -21,7 +21,7 @@ const experience = [
   {
     company: "Skill",
     role: "Programming Coach",
-    period: "2022",
+    period: "2023",
   },
 ];
 
