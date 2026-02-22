@@ -45,7 +45,7 @@ function AboutPage() {
           <h1>Hi, I'm Jacob.</h1>
           <p>
             I'm a developer focused on building clean, functional interfaces.
-            Currently, I'm working on designing a typography called{" "}
+            Currently, I'm working on designing a typeface called{" "}
             <strong>Slib Sans</strong>
           </p>
 
