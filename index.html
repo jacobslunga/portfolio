@@ -58,6 +58,28 @@
       href="https://fonts.googleapis.com/css2?family=Fragment+Mono:ital@0;1&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Theme script to prevent flash -->
+    <script>
+      (function () {
+        const storedTheme = localStorage.getItem("theme");
+        const systemPrefersDark = window.matchMedia(
+          "(prefers-color-scheme: dark)",
+        ).matches;
+
+        if (storedTheme === "dark" || (!storedTheme && systemPrefersDark)) {
+          document.documentElement.classList.add("dark");
+        }
+
+        document.documentElement.classList.add("no-transitions");
+
+        window.addEventListener("DOMContentLoaded", function () {
+          setTimeout(function () {
+            document.documentElement.classList.remove("no-transitions");
+          }, 0);
+        });
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>

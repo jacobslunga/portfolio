@@ -1,3 +1,4 @@
+import { useState } from "react";
 import ArrowBackRoundedIcon from "@mui/icons-material/ArrowBackRounded";
 import { Button } from "../components/ui/button";
 import { Link } from "react-router-dom";
@@ -5,6 +6,7 @@ import { ThemeToggle } from "../components/ThemeToggle";
 import { ProjectAccordion } from "../components/ProjectAccordion";
 import { RecentListenings } from "../components/RecentListening";
 import { PlacesCarousel } from "../components/PlacesCarousel";
+import { Blurhash } from "react-blurhash";
 
 const AboutHeader = () => {
   return (
@@ -25,17 +27,33 @@ const AboutHeader = () => {
 };
 
 function AboutPage() {
+  const [imageLoaded, setImageLoaded] = useState(false);
+
   return (
     <div className="flex flex-col items-center w-full min-h-screen pb-20">
       <AboutHeader />
 
       <main className="w-full max-w-3xl px-6 mt-24">
         <section className="mb-12 flex flex-col items-center justify-center">
-          <img
-            src="/images/me/Hay.webp"
-            alt="Jacob Slunga at Hay in Copenhagen"
-            className="max-w-[95%] sm:max-w-100 self-center object-cover rounded-xl transition-transform duration-500 group-hover:scale-105"
-          />
+          <div className="relative w-full max-w-[95%] sm:max-w-100">
+            {!imageLoaded && (
+              <Blurhash
+                hash="LUKA{9+ZvL%1?wkXNIfkpxXmSzSh"
+                punch={1}
+                width="100%"
+                height={400}
+                className="rounded-xl"
+              />
+            )}
+            <img
+              src="/images/me/Hay.webp"
+              alt="Jacob Slunga at Hay in Copenhagen"
+              className={`w-full object-cover rounded-xl transition-opacity duration-500 ${
+                imageLoaded ? "opacity-100" : "opacity-0 absolute top-0"
+              }`}
+              onLoad={() => setImageLoaded(true)}
+            />
+          </div>
           <p className="mt-3 text-sm text-foreground/50 italic text-center">
             Me at Hay in Copenhagen.
           </p>

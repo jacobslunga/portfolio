@@ -18,8 +18,8 @@ const places = [
   },
 ];
 
-const RADIUS = 260;
-const AUTO_SPEED = 0.25;
+const RADIUS = 200;
+const AUTO_SPEED = 0.3;
 
 export const PlacesCarousel = () => {
   const [rotY, setRotY] = useState(0);
