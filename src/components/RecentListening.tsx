@@ -1,4 +1,5 @@
 import { FaSpotify } from "react-icons/fa";
+import {Link} from "react-router-dom";
 
 const listenings = [
   {
@@ -29,7 +30,7 @@ export const RecentListenings = () => {
           key={index}
           className="flex flex-col items-start gap-2 w-full md:w-auto md:mx-0"
         >
-          <div className="w-full md:w-48 h-auto md:h-48 shadow-xl">
+          <div className="w-full md:w-48 h-auto md:h-48">
             <img
               src={item.image}
               alt={item.track}
@@ -38,15 +39,15 @@ export const RecentListenings = () => {
           </div>
 
           {item.spotifyLink && (
-            <a
-              href={item.spotifyLink}
+            <Link
+              to={item.spotifyLink}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 px-4 py-2 bg-[#1DD660] rounded-full text-black font-semibold text-xs hover:scale-105 transition-transform"
             >
               <FaSpotify size={16} />
               Listen on Spotify
-            </a>
+            </Link>
           )}
 
           <div className="flex flex-col w-full md:w-48 text-left items-start justify-start gap-2">
