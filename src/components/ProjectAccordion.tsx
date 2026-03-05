@@ -65,7 +65,7 @@ export function ProjectAccordion() {
                 <span className="text-xs font-mono text-neutral-400 uppercase tracking-widest">
                   {project.year}
                 </span>
-                <h3 className="text-2xl md:text-4xl font-medium tracking-tighter">
+                <h3 className="text-2xl md:text-4xl font-medium">
                   {project.title}
                 </h3>
               </div>

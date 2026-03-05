@@ -35,31 +35,36 @@ function AboutPage() {
 
       <main className="w-full max-w-3xl px-6 mt-24">
         <section className="mb-12 flex flex-col items-center justify-center">
-          <div className="relative w-full max-w-[95%] sm:max-w-100">
+          <div className="relative w-full max-w-[95%] sm:max-w-100 aspect-4/5 rounded-xl overflow-hidden">
             {!imageLoaded && (
               <Blurhash
                 hash="LUKA{9+ZvL%1?wkXNIfkpxXmSzSh"
                 punch={1}
                 width="100%"
-                height={400}
-                className="rounded-xl"
+                height="100%"
+                style={{
+                  position: "absolute",
+                  inset: 0,
+                  width: "100%",
+                  height: "100%",
+                }}
               />
             )}
             <img
               src="/images/me/Hay.webp"
               alt="Jacob Slunga at Hay in Copenhagen"
-              className={`w-full object-cover rounded-xl transition-opacity duration-500 ${
-                imageLoaded ? "opacity-100" : "opacity-0 absolute top-0"
+              className={`w-full h-full object-cover transition-opacity duration-500 sepia-[.15] saturate-[1.1] brightness-[1.02] ${
+                imageLoaded ? "opacity-100" : "opacity-0"
               }`}
               onLoad={() => setImageLoaded(true)}
             />
           </div>
-          <p className="mt-3 text-sm text-foreground/50 italic text-center">
+          <p className="mt-3 text-sm text-foreground-muted italic text-center">
             Me at Hay in Copenhagen.
           </p>
         </section>
 
-        <article className="prose prose-neutral lg:prose-lg dark:prose-invert max-w-none">
+        <article className="prose lg:prose-lg max-w-none text-foreground-muted prose-p:text-foreground-muted prose-li:text-foreground-muted prose-headings:text-foreground prose-strong:text-foreground prose-a:text-primary">
           <h1>Hi, I'm Jacob.</h1>
           <p>
             I'm a developer focused on building clean, functional interfaces.

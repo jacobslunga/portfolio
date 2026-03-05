@@ -1,5 +1,5 @@
 import { FaSpotify } from "react-icons/fa";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const listenings = [
   {
@@ -43,7 +43,7 @@ export const RecentListenings = () => {
               to={item.spotifyLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-4 py-2 bg-[#1DD660] rounded-full text-black font-semibold text-xs hover:scale-105 transition-transform"
+              className="flex items-center gap-2 px-4 py-2 bg-[#1DD660] rounded-full text-black! font-semibold text-xs hover:scale-105 transition-transform"
             >
               <FaSpotify size={16} />
               Listen on Spotify

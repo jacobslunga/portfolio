@@ -112,7 +112,7 @@ export const PlacesCarousel = () => {
                 draggable={false}
               />
               <div className="mt-2 text-center">
-                <p className="text-sm font-semibold tracking-tight">
+                <p className="text-sm font-semibold text-foreground!">
                   {place.name}
                 </p>
                 <p className="text-xs text-foreground/50 italic">
