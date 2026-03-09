@@ -1,24 +1,26 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @plugin "@tailwindcss/typography";
 
 @variant dark (&:where(.dark, .dark *));
 
 :root {
-  font-family: "Host Grotesk", Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Host Grotesk', Avenir, Helvetica, Arial, sans-serif;
 
-  --primary-color: #b35656;
-  --background: #fbf8f1;
-  --foreground: #211010;
-  --foreground-muted: #583636;
+  --theme-hue: 4;
+  --primary-color: hsl(var(--theme-hue) 56% 54%);
+  --background: hsl(calc(var(--theme-hue) + 30) 55% 96%);
+  --foreground: hsl(var(--theme-hue) 38% 12%);
+  --foreground-muted: hsl(var(--theme-hue) 28% 30%);
+  --card-bg: hsl(calc(var(--theme-hue) + 12) 38% 98%);
 }
 
 .dark {
-  --primary-color: #e07a7a;
-  --background: #121212;
-  --foreground: #e8c4c4;
-  --foreground-muted: #a0a0a0;
-  --card-bg: #1e1e1e;
+  --primary-color: hsl(var(--theme-hue) 78% 72%);
+  --background: hsl(calc(var(--theme-hue) - 8) 20% 8%);
+  --foreground: hsl(var(--theme-hue) 68% 88%);
+  --foreground-muted: hsl(var(--theme-hue) 28% 72%);
+  --card-bg: hsl(calc(var(--theme-hue) - 4) 18% 13%);
 }
 
 @theme {
@@ -28,8 +30,8 @@
   --color-foreground-muted: var(--foreground-muted);
   --color-card: var(--card-bg);
 
-  --font-serif: "Instrument Serif", serif;
-  --font-mono: "Fragment Mono", monospace;
+  --font-serif: 'Instrument Serif', serif;
+  --font-mono: 'Fragment Mono', monospace;
 }
 
 body {
@@ -53,4 +55,71 @@ h5,
 h6 {
   font-weight: 600;
   color: var(--color-foreground);
+}
+
+.theme-hue-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 1.75rem;
+  background: transparent;
+  cursor: pointer;
+}
+
+.theme-hue-slider:focus {
+  outline: none;
+}
+
+.theme-hue-slider::-webkit-slider-runnable-track {
+  height: 1.75rem;
+  background: transparent;
+}
+
+.theme-hue-slider::-moz-range-track {
+  height: 1.75rem;
+  background: transparent;
+  border: none;
+}
+
+.theme-hue-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 1rem;
+  height: 1rem;
+  margin-top: 0.375rem;
+  border-radius: 9999px;
+  border: 2px solid color-mix(in srgb, var(--background) 78%, white);
+  background: var(--primary-color);
+  box-shadow:
+    0 0 0 4px color-mix(in srgb, var(--primary-color) 12%, transparent),
+    0 4px 14px color-mix(in srgb, var(--foreground) 12%, transparent);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.theme-hue-slider::-moz-range-thumb {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 9999px;
+  border: 2px solid color-mix(in srgb, var(--background) 78%, white);
+  background: var(--primary-color);
+  box-shadow:
+    0 0 0 4px color-mix(in srgb, var(--primary-color) 12%, transparent),
+    0 4px 14px color-mix(in srgb, var(--foreground) 12%, transparent);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.theme-hue-slider:hover::-webkit-slider-thumb,
+.theme-hue-slider:focus-visible::-webkit-slider-thumb {
+  transform: scale(1.08);
+}
+
+.theme-hue-slider:hover::-moz-range-thumb,
+.theme-hue-slider:focus-visible::-moz-range-thumb {
+  transform: scale(1.08);
 }
