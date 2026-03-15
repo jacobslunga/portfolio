@@ -6,7 +6,6 @@ import EmailRoundedIcon from '@mui/icons-material/EmailRounded';
 import DescriptionRoundedIcon from '@mui/icons-material/DescriptionRounded';
 import ArrowForwardRoundedIcon from '@mui/icons-material/ArrowForwardRounded';
 import { ThemeToggle } from '../components/ThemeToggle';
-import { HueSlider } from '../components/HueSlider';
 
 const experience = [
   {
@@ -65,7 +64,6 @@ function HomePage() {
           </a>
         </div>
         <div className='flex items-start gap-2'>
-          <HueSlider />
           <ThemeToggle />
         </div>
       </header>

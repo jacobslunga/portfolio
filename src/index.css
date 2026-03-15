@@ -5,31 +5,31 @@
 @variant dark (&:where(.dark, .dark *));
 
 @font-face {
-  font-family: 'Camera';
-  src: url('/fonts/CameraPlain-Regular.otf');
+  font-family: 'Helvena';
+  src: url('/fonts/helvena-regular.otf');
   font-weight: 400;
 }
 
 @font-face {
-  font-family: 'Camera';
-  src: url('/fonts/CameraPlain-Medium.otf');
+  font-family: 'Helvena';
+  src: url('/fonts/helvena-medium.otf');
   font-weight: 500;
 }
 
 @font-face {
-  font-family: 'Camera';
-  src: url('/fonts/CameraPlain-Medium.otf');
+  font-family: 'Helvena';
+  src: url('/fonts/helvena-semibold.otf');
   font-weight: 600;
 }
 
 @font-face {
-  font-family: 'Camera';
-  src: url('/fonts/CameraPlain-Bold.otf');
+  font-family: 'Helvena';
+  src: url('/fonts/helvena-bold.otf');
   font-weight: 700;
 }
 
 :root {
-  font-family: 'Camera', Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Helvena', Avenir, Helvetica, Arial, sans-serif;
 
   --theme-hue: 4;
   --primary-color: hsl(var(--theme-hue) 48% 50%);
