@@ -1,35 +1,35 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @plugin "@tailwindcss/typography";
 
 @variant dark (&:where(.dark, .dark *));
 
 @font-face {
-  font-family: 'Helvena';
-  src: url('/fonts/helvena-regular.otf');
+  font-family: "Makro";
+  src: url("/fonts/Makro-Regular.otf");
   font-weight: 400;
 }
 
 @font-face {
-  font-family: 'Helvena';
-  src: url('/fonts/helvena-medium.otf');
+  font-family: "Makro";
+  src: url("/fonts/Makro-Medium.otf");
   font-weight: 500;
 }
 
 @font-face {
-  font-family: 'Helvena';
-  src: url('/fonts/helvena-semibold.otf');
+  font-family: "Makro";
+  src: url("/fonts/Makro-SemiBold.otf");
   font-weight: 600;
 }
 
 @font-face {
-  font-family: 'Helvena';
-  src: url('/fonts/helvena-bold.otf');
+  font-family: "Makro";
+  src: url("/fonts/Makro-Bold.otf");
   font-weight: 700;
 }
 
 :root {
-  font-family: 'Helvena', Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Makro", Avenir, Helvetica, Arial, sans-serif;
 
   --theme-hue: 4;
   --primary-color: hsl(var(--theme-hue) 48% 50%);
@@ -54,8 +54,8 @@
   --color-foreground-muted: var(--foreground-muted);
   --color-card: var(--card-bg);
 
-  --font-serif: 'Instrument Serif', serif;
-  --font-mono: 'Fragment Mono', monospace;
+  --font-serif: "Instrument Serif", serif;
+  --font-mono: "Fragment Mono", monospace;
 }
 
 body {

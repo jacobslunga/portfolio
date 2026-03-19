@@ -1,25 +1,25 @@
-import { useState } from 'react';
-import ArrowBackRoundedIcon from '@mui/icons-material/ArrowBackRounded';
-import { Button } from '../components/ui/button';
-import { Link } from 'react-router-dom';
-import { ThemeToggle } from '../components/ThemeToggle';
-import { ProjectAccordion } from '../components/ProjectAccordion';
-import { RecentListenings } from '../components/RecentListening';
-import { PlacesCarousel } from '../components/PlacesCarousel';
-import { Blurhash } from 'react-blurhash';
+import { useState } from "react";
+import ArrowBackRoundedIcon from "@mui/icons-material/ArrowBackRounded";
+import { Button } from "../components/ui/button";
+import { Link } from "react-router-dom";
+import { ThemeToggle } from "../components/ThemeToggle";
+import { ProjectAccordion } from "../components/ProjectAccordion";
+import { RecentListenings } from "../components/RecentListening";
+import { PlacesCarousel } from "../components/PlacesCarousel";
+import { Blurhash } from "react-blurhash";
 
 const AboutHeader = () => {
   return (
-    <div className='fixed bg-background/80 backdrop-blur-md top-0 h-16 w-full flex flex-row items-center justify-between px-4 md:px-8 lg:px-10 z-50'>
-      <Link to='/' viewTransition>
-        <Button size='sm' variant='outline'>
-          <ArrowBackRoundedIcon fontSize='small' />
+    <div className="fixed bg-linear-to-b from-background/80 to-transparent top-0 h-20 w-full flex flex-row items-center justify-between px-4 md:px-8 lg:px-10 z-50">
+      <Link to="/" viewTransition>
+        <Button size="sm" variant="secondary">
+          <ArrowBackRoundedIcon fontSize="small" />
           Back to home
         </Button>
       </Link>
 
-      <div className='flex items-center gap-2'>
-        <h2 className='text-md font-medium text-foreground/60'>About me</h2>
+      <div className="flex items-center gap-2">
+        <h2 className="text-md font-normal text-foreground/60">About me</h2>
         <ThemeToggle />
       </div>
     </div>
@@ -30,45 +30,45 @@ function AboutPage() {
   const [imageLoaded, setImageLoaded] = useState(false);
 
   return (
-    <div className='flex flex-col items-center w-full min-h-screen pb-20'>
+    <div className="flex flex-col items-center w-full min-h-screen pb-20">
       <AboutHeader />
 
-      <main className='w-full max-w-3xl px-6 mt-24'>
-        <section className='mb-12 flex flex-col items-center justify-center'>
-          <div className='relative w-full max-w-[95%] sm:max-w-100 aspect-4/5 rounded-xl overflow-hidden'>
+      <main className="w-full max-w-3xl px-6 mt-24">
+        <section className="mb-12 flex flex-col items-center justify-center">
+          <div className="relative w-full max-w-[95%] sm:max-w-100 aspect-4/5 rounded-xl overflow-hidden">
             {!imageLoaded && (
               <Blurhash
-                hash='LUKA{9+ZvL%1?wkXNIfkpxXmSzSh'
+                hash="LUKA{9+ZvL%1?wkXNIfkpxXmSzSh"
                 punch={1}
-                width='100%'
-                height='100%'
+                width="100%"
+                height="100%"
                 style={{
-                  position: 'absolute',
+                  position: "absolute",
                   inset: 0,
-                  width: '100%',
-                  height: '100%',
+                  width: "100%",
+                  height: "100%",
                 }}
               />
             )}
             <img
-              src='/images/me/Hay.webp'
-              alt='Jacob Slunga at Hay in Copenhagen'
+              src="/images/me/Hay.webp"
+              alt="Jacob Slunga at Hay in Copenhagen"
               className={`w-full h-full object-cover transition-opacity duration-500 sepia-[.15] saturate-[1.1] brightness-[1.02] ${
-                imageLoaded ? 'opacity-100' : 'opacity-0'
+                imageLoaded ? "opacity-100" : "opacity-0"
               }`}
               onLoad={() => setImageLoaded(true)}
             />
           </div>
-          <p className='mt-3 text-sm text-foreground-muted italic text-center'>
+          <p className="mt-3 text-sm text-foreground-muted italic text-center">
             Me at Hay in Copenhagen.
           </p>
         </section>
 
-        <article className='prose lg:prose-lg max-w-none text-foreground-muted prose-p:text-foreground-muted prose-li:text-foreground-muted prose-headings:text-foreground prose-strong:text-foreground prose-a:text-primary'>
+        <article className="prose lg:prose-lg max-w-none text-foreground-muted prose-p:text-foreground-muted prose-li:text-foreground-muted prose-headings:text-foreground prose-strong:text-foreground prose-a:text-primary">
           <h1>Hi, I'm Jacob.</h1>
           <p>
             I'm a developer focused on building clean, functional interfaces.
-            Currently, I'm working on designing a typeface called{' '}
+            Currently, I'm working on designing a typeface called{" "}
             <strong>Slib Sans</strong>
           </p>
 
@@ -79,7 +79,7 @@ function AboutPage() {
 
           <h2>My Design Philosophy</h2>
           <p>
-            I think the best products we use everyday have one thing in common:{' '}
+            I think the best products we use everyday have one thing in common:{" "}
             <strong>they are custom designs</strong>. What I mean by this is
             that we can identify the brand with it's colors, fonts, layouts etc.
             With the rise of vibe-coding, this feels more important now than
@@ -95,18 +95,18 @@ function AboutPage() {
           <h2>Recent Listenings</h2>
           <RecentListenings />
 
-          <h3 className='font-serif italic border-b border-primary/20 pb-2'>
+          <h3 className="font-serif italic border-b border-primary/20 pb-2">
             The Particulars
           </h3>
-          <ul className='list-none pl-0'>
+          <ul className="list-none pl-0">
             <li>📍 Based in Linköping, Sweden</li>
             <li>🎯 Quite good at Dart</li>
             <li>
-              📚 Currently studying my 4th year of CS at{' '}
+              📚 Currently studying my 4th year of CS at{" "}
               <Link
-                to='https://liu.se/'
-                target='_blank'
-                className='text-[#36968a]'
+                to="https://liu.se/"
+                target="_blank"
+                className="text-[#36968a]"
               >
                 LiU
               </Link>
