@@ -22,7 +22,7 @@ const projects: Project[] = [
     title: "Mejra",
     year: "2025",
     description:
-      "Bachelor's thesis project at Linköping University. We developed a visual requirements management tool as a web application to help companies handle complex requirement dependencies interactively.",
+      "Bachelor's thesis project at Linkoping University. We developed a visual requirements management tool as a web application to help companies handle complex requirement dependencies interactively.",
     reportLink:
       "https://liu.diva-portal.org/smash/get/diva2:1972576/FULLTEXT01.pdf",
     logoLink: "/images/projects/Mejra.webp",
@@ -32,7 +32,7 @@ const projects: Project[] = [
     title: "LiU Tentor",
     year: "2024 - Today",
     description:
-      "A specialized search engine designed to help students at Linköping University find and archive past examination papers with ease.",
+      "A specialized search engine designed to help students at Linkoping University find and archive past examination papers with ease.",
     link: "https://liutentor.se",
     githubLink: "https://github.com/jacobslunga/liu-tentor-radix",
     logoLink: "/images/projects/liutentor.webp",

@@ -99,7 +99,7 @@ function AboutPage() {
             The Particulars
           </h3>
           <ul className="list-none pl-0">
-            <li>📍 Based in Linköping, Sweden</li>
+            <li>📍 Based in Linkoping, Sweden</li>
             <li>🎯 Quite good at Dart</li>
             <li>
               📚 Currently studying my 4th year of CS at{" "}

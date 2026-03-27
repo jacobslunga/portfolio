@@ -1,27 +1,27 @@
-import React from 'react';
-import { cn } from '../../lib/utils';
-import { cva, type VariantProps } from 'class-variance-authority';
+import React from "react";
+import { cn } from "../../lib/utils";
+import { cva, type VariantProps } from "class-variance-authority";
 
 const buttonVariants = cva(
-  'inline-flex items-center gap-1 justify-center active:scale-95 rounded-xl font-medium transition-all focus:outline-none disabled:opacity-50 disabled:pointer-events-none cursor-pointer',
+  "inline-flex items-center gap-1 justify-center active:scale-95 rounded-full font-medium transition-all focus:outline-none disabled:opacity-50 disabled:pointer-events-none cursor-pointer",
   {
     variants: {
       variant: {
-        primary: 'bg-primary text-white',
-        secondary: 'bg-primary/10 text-primary hover:bg-primary/20',
+        primary: "bg-primary text-white",
+        secondary: "bg-primary/10 text-primary hover:bg-primary/20",
         outline:
-          'border border-primary/30 text-primary bg-transparent hover:bg-primary/10',
-        link: 'text-primary hover:underline',
+          "border border-primary/30 text-primary bg-transparent hover:bg-primary/10",
+        link: "text-primary hover:underline",
       },
       size: {
-        sm: 'h-9 px-3 text-sm',
-        md: 'h-10 py-2 px-4',
-        lg: 'h-11 px-8 text-lg',
+        sm: "h-10 px-4 text-sm",
+        md: "h-12 px-6",
+        lg: "h-14 px-8 text-lg",
       },
     },
     defaultVariants: {
-      variant: 'primary',
-      size: 'md',
+      variant: "primary",
+      size: "md",
     },
   },
 );
@@ -43,7 +43,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   },
 );
 
-Button.displayName = 'Button';
+Button.displayName = "Button";
 
 // eslint-disable-next-line react-refresh/only-export-components
 export { Button, buttonVariants };
